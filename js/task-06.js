@@ -3,8 +3,8 @@ const inputEl = document.getElementById('validation-input');
 const handleLength = function () {
   const inputValue = this.value.trim().length;
 
-  // const inputValue = e.currentTarget.value.trim().length -> make sure to use e as parameter in the handler function (except arrow functions)
-  // NOTE: You can either used the code above this line, which you are currently using, I used 'this' keyword because, 'this' in a handler function is the element calling itself right? in this case it's the same as input element :))
+  // const inputValue = e.currentTarget.value.trim().length -> make sure to use e as parameter in the handler function
+  // NOTE: You can either used the code above this line, which you are currently using, I used 'this' keyword because, 'this' in a handler function (except arrow function) is the element calling itself right? in this case it's the same as input element :))
   const requiredLength = this.dataset.length;
 
   if (inputValue === parseInt(requiredLength)) {
