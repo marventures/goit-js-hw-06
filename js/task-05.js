@@ -1,10 +1,13 @@
-const inputEl = document.querySelector('input#name-input');
-const outputEl = document.querySelector('span#name-output');
-const outputElContent = outputEl.textContent;
+const inputEl = document.querySelector('#name-input');
+const outputEl = document.querySelector('#name-output');
 
-inputEl.addEventListener('input', (event) => {    
-    let inputValidation = event.currentTarget.value > ''
-        ? outputEl.textContent = event.currentTarget.value
-        : outputEl.textContent = outputElContent;
-    return inputValidation;
-});
+inputEl.addEventListener('input', handleInput);
+
+function handleInput(event) {
+  let inputValue = event.currentTarget.value.trim();
+  if (inputValue) {
+    outputEl.textContent = inputValue;
+  } else {
+    outputEl.textContent = 'Anonymous';
+  }
+}
