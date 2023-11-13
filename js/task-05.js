@@ -1,8 +1,6 @@
 const inputEl = document.querySelector('#name-input');
 const outputEl = document.querySelector('#name-output');
 
-inputEl.addEventListener('input', handleInput);
-
 function handleInput(event) {
   let inputValue = event.currentTarget.value.trim();
   if (inputValue) {
@@ -11,3 +9,5 @@ function handleInput(event) {
     outputEl.textContent = 'Anonymous';
   }
 }
+
+inputEl.addEventListener('input', handleInput);
